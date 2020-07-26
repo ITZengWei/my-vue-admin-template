@@ -1,0 +1,47 @@
+/* 设置全局样式 */
+/* (1) 页面高度100%,默认字体28upx,默认行高1.8,背景颜色 */
+html, body {
+    height: 100%;
+    font-size: 13px;
+    background-color: #FFFFFF;
+    color: #009688;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+
+}
+body {
+    min-height: 100%;
+    /*overflow: scroll;*/
+}
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #e2e2e2;
+}
+body::-webkit-scrollbar-track {
+    background-color: #e2e2e2;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: rgba(0,0,0,.3);
+}
+
+
+/* (2) 图片默认100%宽度 */
+/* image{  width: 100%;  } */
+/* 主色调 */
+/* 主背景颜色（橙色）*/
+.main-bg-color { background-color: #001529; }
+
+.body-bg-color { background: rgb(215, 215, 215); }
+
+.footer-bg-color { background: #f0f2f5; }
+
+.body-content {
+    background-color: #fff;
+    /*margin: 24px 16px;*/
+    min-height: 660px;
+    border-bottom: 1px solid #e8e8e8;
+    border-radius: 2px 2px 0 0;
+    padding: 18px 12px;
+}

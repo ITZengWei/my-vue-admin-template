@@ -1,0 +1,26 @@
+/*
+* @Author 陌琼先森
+* @Date 2020-7-26 0:19
+* @LastEditTime 2020-7-26 0:19
+* @Description 全局样式入口
+* @FilePath \my-vue-admin-template\src\styles\index.css
+* */
+
+/* 导入第三方基础样式 */
+@import "./normallize.css";
+
+/* 导入基础样式 */
+@import "./base.css";
+
+/* 导入动画库样式 */
+@import "./animate.css";
+
+/* 导入字体图标 */
+
+
+/* 导入CSS工具类样式 */
+@import "./zcm-main.css";
+
+/* 导入本项目公共样式 */
+@import "./common.css";
+
