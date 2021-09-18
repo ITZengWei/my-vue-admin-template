@@ -9,7 +9,6 @@ export { default as ContainerFooter } from './container/container-footer'
 
 
 
-
 /* 配置全局组件 */
 const GlobalComponents = require.context('./global', false, /.vue$/)
 

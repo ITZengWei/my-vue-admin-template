@@ -10,6 +10,9 @@
 export default {
   name: 'Home',
   components: {
+  },
+  mounted() {
+	  console.log('生产环境测试')
   }
 }
 </script>

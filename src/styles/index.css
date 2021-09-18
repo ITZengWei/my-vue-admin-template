@@ -17,10 +17,9 @@
 
 /* 导入字体图标 */
 
-
 /* 导入CSS工具类样式 */
 @import "./zcm-main.css";
 
 /* 导入本项目公共样式 */
-@import "./common.css";
+/*@import "./common.css";*/
 

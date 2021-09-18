@@ -13,14 +13,6 @@
       class="py-2 px-1"
       style="width: 200px; overflow: hidden;  height: 30px;"
     >
-
-      <!-- 输入框 -->
-      <!--<el-input-->
-        <!--v-model.trim="searchMenuText"-->
-        <!--placeholder="搜索菜单"-->
-        <!--size="mini"-->
-        <!--style="width: 80%; background-color:#001529; outline: none;"-->
-      <!--/>-->
       <el-autocomplete
               class="inline-input"
               v-model.trim="searchMenuText"
@@ -110,40 +102,13 @@
 <script>
 	const originNavList = [
 		{ icon: 'el-icon-s-home', label: '首页', pathname: 'home' },
-		{ icon: 'el-icon-s-custom', label: '人员监控', pathname: 'listen' },
 		{
-			icon: 'unordered-list', label: '超级管理员',
+			icon: 'el-icon-s-grid', label: '作品管理',
 			children: [
-				{ icon: 'user', label: '用户管理', pathname: 'user_audit' },
-				{ icon: 'appstore', label: '分类管理', pathname: 'article_category' },
-				{ icon: 'unordered-list', label: '相册管理', pathname: 'album_admin' },
-				{ icon: 'unordered-list', label: '记录管理', pathname: 'record_admin' },
-				{
-					icon: 'unordered-list', label: '游戏管理', pathname: 'game_admin',
-          children: [
-	          { icon: 'user', label: '游戏添加', pathname: 'game_admin-add' },
-	          { icon: 'appstore', label: '游戏删除', pathname: 'game_admin-remove' },
-          ]
-        },
+				{ icon: 'bars', label: '作品列表', pathname: 'category_list' },
+				{ icon: 'trademark', label: '添加作品', pathname: 'add_category' },
 			]
 		},
-		{
-			icon: 'el-icon-s-grid', label: '分类管理',
-			children: [
-				{ icon: 'bars', label: '分类列表', pathname: 'category_list' },
-				{ icon: 'trademark', label: '添加分类', pathname: 'add_category' },
-			]
-		},
-		{
-			icon: 'el-icon-reading', label: '文章管理',
-			children: [
-				{ icon: 'el-icon-s-order', label: '文章列表', pathname: 'article_list' },
-				{ icon: 'el-icon-s-order', label: '我的文章', pathname: 'my_article' },
-				{ icon: 'el-icon-s-order', label: '文章录入', pathname: 'add_article' }
-			]
-		},
-		{ icon: 'el-icon-setting', label: '设置', pathname: 'setting' },
-		{ icon: 'el-icon-place', label: '关于', pathname: 'about' },
 	]
 
 

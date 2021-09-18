@@ -13,8 +13,11 @@ function resolve (dir) {
 	return path.join(__dirname, dir)
 }
 
-/* 使用可视化打包插件 图形化打包详情 */
+// 使用可视化打包插件 图形化打包详情
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+
+// 代码打包之后取出console.log压缩代码
+const TerserPlugin = require('terser-webpack-plugin')
 
 
 // 是否为本地开发环境
@@ -75,9 +78,30 @@ module.exports = {
 	},
 
 	configureWebpack: config => {
-
 		// 忽略打包配置
 		// config.externals = cdn.externals
+
+
+		// 生产环境配置
+		if (IS_PRODUCTION) {
+			console.log('生产环境')
+			// 代码压缩去除console.log
+			config.plugins.push(
+				new TerserPlugin({
+					terserOptions: {
+						ecma: undefined,
+						warnings: false,
+						parse: {},
+						compress: {
+							drop_console: true,
+							drop_debugger: false,
+							pure_funcs: ['console.log'] // 移除console
+						}
+					}
+				})
+			)
+		}
+
 	},
 
 

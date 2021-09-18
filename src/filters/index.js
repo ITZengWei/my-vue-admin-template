@@ -17,7 +17,7 @@ const GlobalFilter = {
 export default {
 	install(Vue) {
 		Object.keys(GlobalFilter).forEach(key => {
-			Vue.directive(key, GlobalFilter[key])
+			Vue.filter(key, GlobalFilter[key])
 		})
 	}
 }
